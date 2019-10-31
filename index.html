@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Be+Vietnam:600&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Oswald:600&display=swap" rel="stylesheet">
+	<title>T-Shirt Order Form</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
+	<script type="text/javascript" src="validation.js"></script>
+
+</head>
+<body>
+	<div class="header">
+		<img src="./images/logo.jpg" alt="logo.jpg" width="200" height="200" align="right">
+		<img src="./images/logo.jpg" alt="logo.jpg" width="200" height="200" align="left">
+		<h1>OVO Store </h1>
+		<h2 style="font-size: 40px">October's Very Own</h2>
+	</div>
+	<div class="subheading">
+		<h3>T-SHIRT ORDER FORM</h3>
+	</div>
+	<div>
+		<form method="post" action="" id="orderForm" onsubmit="validateForm()">
+			<fieldset>
+				<legend class="subheading">Select Your Item</legend>
+
+				<label><input type="checkbox" name="item1" value="tshirt" id="tshirt"><img src="./images/tshirt.png" width="250" height="300" onclick="calculateTotal()"></label>	
+
+				<label><input type="checkbox" name="item2" value="hoodie" id="hoodie"><img src="./images/hoodie.jpg" width="250" height="300" onclick="calculateTotal()"> </label>
+
+				<label><input type="checkbox" name="item3" value="polo" id="polo"><img src="./images/polo.webp" width="250" height="300" onclick="calculateTotal()"> </label>
+				
+				<label><input type="checkbox" name="item4" value="tankTop" id="tankTop"><img src="./images/tank.jpeg" width="250" height="300" onclick="calculateTotal()" ></label> 
+
+				<label style="margin-left: 125px">$35.00</label>
+				<label style="margin-left: 225px">$50.00</label>
+				<label style="margin-left: 225px">$20.00</label>
+				<label style="margin-left: 225px">$25.00</label>
+
+				<label style="margin-left: 50px">Quantity</label>
+				<select id="quantity" name="quantity" onchange="calculateTotal()">
+					<option value="0">Quantity</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+				</select>
+
+				<label style="margin-left: 100px">Quantity</label>
+				<select id="quantity2" name="quantity2" onchange="calculateTotal()">
+					<option value="0">Quantity</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+				</select>
+
+				<label style="margin-left: 100px">Quantity</label>
+				<select id="quantity3" name="quantity3" onchange="calculateTotal()">
+					<option value="0">Quantity</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+				</select>
+
+				<label style="margin-left: 100px">Quantity</label>
+				<select id="quantity4" name="quantity4" onchange="calculateTotal()">
+					<option value="0">Quantity</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+				</select>
+
+				<label style="margin-left: 85px">Size</label>
+				<select id="sizeOfProduct" name="sizeOfProduct"  onchange="calculateTotal()">
+					<option value="0">Size</option>
+					<option value="2">XS</option>
+					<option value="5">S</option>
+					<option value="10">M</option>
+					<option value="20">L</option>
+					<option value="30">XL</option>
+					<option value="40">XXL</option>
+					<option value="50">XXXL</option>
+				</select>
+
+				<label style="margin-left: 138px">Size</label>
+				<select id="sizeOfProduct2" name="sizeOfProduct2"  onchange="calculateTotal()">
+					<option value="0">Size</option>
+					<option value="2">XS</option>
+					<option value="5">S</option>
+					<option value="10">M</option>
+					<option value="20">L</option>
+					<option value="30">XL</option>
+					<option value="40">XXL</option>
+					<option value="50">XXXL</option>
+				</select>
+
+				<label style="margin-left: 138px">Size</label>
+				<select id="sizeOfProduct3" name="sizeOfProduct3"  onchange="calculateTotal()">
+					<option value="0">Size</option>
+					<option value="2">XS</option>
+					<option value="5">S</option>
+					<option value="10">M</option>
+					<option value="20">L</option>
+					<option value="30">XL</option>
+					<option value="40">XXL</option>
+					<option value="50">XXXL</option>
+				</select>
+
+				<label style="margin-left: 138px">Size</label>
+				<select id="sizeOfProduct4" name="sizeOfProduct4"  onchange="calculateTotal()">
+					<option value="0">Size</option>
+					<option value="2">XS</option>
+					<option value="5">S</option>
+					<option value="10">M</option>
+					<option value="20">L</option>
+					<option value="30">XL</option>
+					<option value="40">XXL</option>
+					<option value="50">XXXL</option>
+				</select>
+
+				<label style="margin-left: 350px;">NOTE: TO REMOVE AN ITEM SET SIZE OR QUANTITY TO DEFAULT VALUE</label><br>
+				
+				<div>
+					<p id="totalLabel"style="text-align: center;">SUBTOTAL = $0.00</p>
+				</div>
+				<div>
+					<p id="total"style="text-align: center;">TOTAL AFTER TAX = $0.00</p>
+				</div>
+			</fieldset>
+
+			<fieldset>
+				<legend class="subheading">Order Information</legend>
+				<h2 style="text-align: center">Credit Card Information</h2>
+				
+				`<label class="inputsL">First Name:</label><input type="text" name="firstName" required placeholder="First Name">
+				
+				<label class=inputsR>Last Name: </label><input type="text" name="lastName" required placeholder="Last Name">
+				
+				<label class="inputsL">Credit Card Number: </label><input type="text" name="cardNum" required placeholder="Card Number">
+				
+				<label style="margin-left: 275px; margin-top: 20px">CVV: </label><input type="text" name="cvv" maxlength="3" required placeholder="CVV">
+				
+				<label style="margin-left: 200px">Expiry Month:</label>
+				<select id = "months" style="margin-top: 20px  onchange="validateForm()"required="">
+					<option value="0">Month</option>
+					<option value="jan">January</option>
+					<option value="feb">February</option>
+					<option value="mar">March</option>
+					<option value="apr">April</option>
+					<option value="may">May</option>
+					<option value="june">June</option>
+					<option value="july">July</option>
+					<option value="aug">August</option>
+					<option value="sep">September</option>
+					<option value="oct">October</option>
+					<option value="nov">November</option>
+					<option value="dec">December</option>
+				</select>
+
+				<label style="margin-left: 400px">Expiry Year:</label>
+				<select style="margin-top: 20px" id="exyear" onchange="validateForm()" required="">
+					<option value="0">Year</option>
+					<option value="19">2019</option>
+					<option value="20">2020</option>
+					<option value="21">2021</option>
+					<option value="22">2022</option>
+				</select>
+
+				<h2 style="text-align: center">Shipping Information</h2>
+
+				<label class="inputsL">Street Address:</label><input type="text" name="streetAddress1" size="125" required placeholder="">
+
+				<label class="inputsL">Street Address Line 2:</label><input type="text" name="streetAddress2" size="125">
+
+				<label class="inputsL">City:</label><input type="text" name="city" size="50" required placeholder="City">
+
+				<label class="inputsR" style="margin-left: 30px">State/Province:</label><input type="text" name="statPro" size="50" required placeholder="Province/State">
+
+				<label class="inputsL" style="margin-left: 200px">Postal/Zip Code:</label><input type="text" name="postal" size="50" required placeholder="Postal Code/Zip Code">
+
+				<label class="inputsL"style="margin-left: 50px">Country:</label>
+				<select id = "country" style="margin-top: 20px; width: 150px" onchange="" required ="">
+					<option value="0">Select</option>
+					<option value="can">Canada</option>
+					<option value="usa">United States</option>
+					<option value="mex">Mexico</option>
+					<option value="Aus">Australia</option>
+				</select>
+
+				<label id="date" class="inputsL" value="00-00-0000">Delivery Date</label>
+				<input type="date" name="deldate">
+
+				<label style="margin-left: 200px">Email:</label>
+				<input type="text" name="email" size="50" required placeholder="Email:"><br>
+
+				<input type="submit" class="SubmitButton" onclick="validateForm()"></input>
+				<button type="buttonClear" class="ClearButton" onclick="clearAll()">Clear</button>
+			</fieldset>
+		</form>
+
+	</div>
+
+	
+	
+	
+</body>
+</html>
